@@ -1,5 +1,85 @@
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-state {
+  margin: auto 23px;
+  display: block;
+  background-color: hsl(213, 19%, 18%);
+  padding: 23px;
+  border-radius: 20px;
+}
+.rating-state figure {
+  margin: 0;
+  background-color: hsl(210, 14%, 22%);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+.rating-state figure img {
+  margin: 10px;
+  width: 12px;
+  aspect-ratio: 1/1;
+}
+.rating-state h1 {
+  color: hsl(0, 100%, 100%);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+.rating-state p {
+  color: hsl(217, 12%, 63%);
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.rating-state form div {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.rating-state form div input {
+  border: none;
+  border-radius: 50%;
+  background-color: hsl(210, 14%, 22%);
+  color: hsl(217, 12%, 63%);
+  padding: 10px 15px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.rating-state form div input:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(213, 19%, 18%);
+  cursor: pointer;
+  outline: 1px solid hsl(216, 12%, 8%);
+}
+.rating-state form div input:active {
+  background-color: hsl(0, 100%, 100%);
+}
+.rating-state form button {
+  width: 100%;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(213, 19%, 18%);
+  text-transform: uppercase;
+  border: 1px solid hsl(216, 12%, 8%);
+  border-radius: 50px;
+  padding: 13px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.rating-state form button:active {
+  background-color: hsl(0, 100%, 100%);
+}
+
+.thank-you-state {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
