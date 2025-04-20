@@ -7,10 +7,24 @@ $grey-900: hsl(213, 19%, 18%);
 $grey-950: hsl(216, 12%, 8%);
 $button-bg: hsl(210, 14%, 22%);
 
+@mixin section {
+  margin: auto 23px;
+  background-color: $grey-900;
+  border-radius: 20px;
+}
+
 @mixin header{
   color: $white;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 500;
+  margin: 20px 0;
+}
+
+@mixin text{
+  color: $grey-500;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 @mixin rating-option{
@@ -18,9 +32,10 @@ $button-bg: hsl(210, 14%, 22%);
   border-radius: 50%;
   background-color: $button-bg;
   color: $grey-500;
-  padding: 10px 15px;
-  font-size: 11px;
-  font-weight: 800;
+  padding: 13px 17px;
+  font-family: $font;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 body{
@@ -35,43 +50,38 @@ body{
 }
 
 .rating-state{
-  margin: auto 23px;
+  @include section;
   display: block;
-  background-color: $grey-900;
+  // display: none;
   padding: 23px;
-  border-radius: 20px;
 
   figure{
     margin: 0;
     background-color: $button-bg;
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    width: 37px;
+    height: 38px;
 
     img{
-      margin: 10px;
-      width: 12px;
+      margin: 11px;
+      width: 16px;
       aspect-ratio: 1/1;
     }
   }
 
   h1 {
     @include header;
-    margin: 15px 0;
   }
 
   p{
-    color: $grey-500;
-    margin: 0;
-    font-size: 12.5px;
-    line-height: 1.5;
+    @include text;
   }
 
   form{
     div{
       display: flex;
       justify-content: space-between;
-      margin: 20px 0;
+      margin: 23px 0;
 
       input{
         @include rating-option;
@@ -96,7 +106,8 @@ body{
       text-transform: uppercase;
       border: 1px solid $grey-950;
       border-radius: 50px;
-      padding: 13px;
+      padding: 15px;
+      margin-bottom: 10px;
       font-weight: 700;
       font-size: 12px;
       letter-spacing: 2px;
@@ -110,5 +121,44 @@ body{
 }
 
 .thank-you-state{
+  @include section;
+  // display: block;
   display: none;
+  text-align: center;
+  padding: 25px;
+
+  figure{
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  h1 {
+    @include header;
+    margin: 15px auto 10px;
+  }
+
+  p{
+    @include text;
+    margin-bottom: 10px;
+    
+  }
+
+  div{
+    display: block;
+    margin: 20px auto 32px;
+
+    &>span:first-child{
+      background-color: $button-bg;
+      padding: 8px 13px 5px 13px;
+      border-radius: 20px;
+      color: $orange-500;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 375px){
+  .rating-state, .thank-you-state {
+    max-width: 300px;
+  }
 }
