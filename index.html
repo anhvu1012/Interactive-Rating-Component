@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- Rating state start -->
-    <section class="rating-state">
+    <section id="rating-state">
       <figure>
         <img src="images/icon-star.svg" alt="Star icon" />
       </figure>
@@ -39,13 +39,13 @@
           <input type="button" id="rating-4" value="4" />
           <input type="button" id="rating-5" value="5" />
         </div>
-        <button type="submit">Submit</button>
+        <button id="submit-btn" type="submit">Submit</button>
       </form>
     </section>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-    <section class="thank-you-state">
+    <section id="thank-you-state">
       <figure>
         <img
           src="images/illustration-thank-you.svg"
@@ -53,7 +53,7 @@
         />
       </figure>
       <div>
-        <span>You selected <span id="rating-input">?</span> out of 5</span>
+        <span>You selected <span id="rating-result"></span> out of 5</span>
       </div>
       <h1>Thank you!</h1>
       <p>
@@ -62,5 +62,6 @@
       </p>
     </section>
     <!-- Thank you state end -->
+    <script src="script.js"></script>
   </body>
 </html>

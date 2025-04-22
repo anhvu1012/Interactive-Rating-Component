@@ -38,6 +38,11 @@ $button-bg: hsl(210, 14%, 22%);
   font-weight: 500;
 }
 
+@mixin active-btn {
+  background-color: $white;
+  color: $grey-900;
+}
+
 body{
   height: 100vh;
   margin: 0;
@@ -49,7 +54,7 @@ body{
   align-items: center;
 }
 
-.rating-state{
+#rating-state{
   @include section;
   display: block;
   // display: none;
@@ -94,8 +99,12 @@ body{
         }
 
         &:active{
-          background-color: $white;
+          @include active-btn;
         }
+      }
+
+      .active {
+        @include active-btn;
       }
     }
 
@@ -120,7 +129,7 @@ body{
   }
 }
 
-.thank-you-state{
+#thank-you-state{
   @include section;
   // display: block;
   display: none;
@@ -157,8 +166,10 @@ body{
   }
 }
 
+
+
 @media screen and (min-width: 375px){
-  .rating-state, .thank-you-state {
+  #rating-state, #thank-you-state {
     max-width: 300px;
   }
 }

@@ -9,43 +9,43 @@ body {
   align-items: center;
 }
 
-.rating-state {
+#rating-state {
   margin: auto 23px;
   background-color: hsl(213, 19%, 18%);
   border-radius: 20px;
   display: block;
   padding: 23px;
 }
-.rating-state figure {
+#rating-state figure {
   margin: 0;
   background-color: hsl(210, 14%, 22%);
   border-radius: 50%;
   width: 37px;
   height: 38px;
 }
-.rating-state figure img {
+#rating-state figure img {
   margin: 11px;
   width: 16px;
   aspect-ratio: 1/1;
 }
-.rating-state h1 {
+#rating-state h1 {
   color: hsl(0, 100%, 100%);
   font-size: 23px;
   font-weight: 500;
   margin: 20px 0;
 }
-.rating-state p {
+#rating-state p {
   color: hsl(217, 12%, 63%);
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
 }
-.rating-state form div {
+#rating-state form div {
   display: flex;
   justify-content: space-between;
   margin: 23px 0;
 }
-.rating-state form div input {
+#rating-state form div input {
   border: none;
   border-radius: 50%;
   background-color: hsl(210, 14%, 22%);
@@ -55,16 +55,21 @@ body {
   font-size: 13px;
   font-weight: 500;
 }
-.rating-state form div input:hover {
+#rating-state form div input:hover {
   background-color: hsl(25, 97%, 53%);
   color: hsl(213, 19%, 18%);
   cursor: pointer;
   outline: 1px solid hsl(216, 12%, 8%);
 }
-.rating-state form div input:active {
+#rating-state form div input:active {
   background-color: hsl(0, 100%, 100%);
+  color: hsl(213, 19%, 18%);
 }
-.rating-state form button {
+#rating-state form div .active {
+  background-color: hsl(0, 100%, 100%);
+  color: hsl(213, 19%, 18%);
+}
+#rating-state form button {
   width: 100%;
   background-color: hsl(25, 97%, 53%);
   color: hsl(213, 19%, 18%);
@@ -78,11 +83,11 @@ body {
   letter-spacing: 2px;
   cursor: pointer;
 }
-.rating-state form button:active {
+#rating-state form button:active {
   background-color: hsl(0, 100%, 100%);
 }
 
-.thank-you-state {
+#thank-you-state {
   margin: auto 23px;
   background-color: hsl(213, 19%, 18%);
   border-radius: 20px;
@@ -90,29 +95,29 @@ body {
   text-align: center;
   padding: 25px;
 }
-.thank-you-state figure {
+#thank-you-state figure {
   margin: 0;
   margin-top: 10px;
 }
-.thank-you-state h1 {
+#thank-you-state h1 {
   color: hsl(0, 100%, 100%);
   font-size: 23px;
   font-weight: 500;
   margin: 20px 0;
   margin: 15px auto 10px;
 }
-.thank-you-state p {
+#thank-you-state p {
   color: hsl(217, 12%, 63%);
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
-.thank-you-state div {
+#thank-you-state div {
   display: block;
   margin: 20px auto 32px;
 }
-.thank-you-state div > span:first-child {
+#thank-you-state div > span:first-child {
   background-color: hsl(210, 14%, 22%);
   padding: 8px 13px 5px 13px;
   border-radius: 20px;
@@ -121,7 +126,7 @@ body {
 }
 
 @media screen and (min-width: 375px) {
-  .rating-state, .thank-you-state {
+  #rating-state, #thank-you-state {
     max-width: 300px;
   }
 }/*# sourceMappingURL=styles.css.map */
